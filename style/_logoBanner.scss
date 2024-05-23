@@ -1,0 +1,17 @@
+#logoBanner {
+    width: 100vw;
+    height: 75px;
+    max-width: 100%;
+    border-bottom: 1px solid $mint;
+    background-color: $green;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        height: 45px;
+        margin: 0 10px;
+        object-fit: contain;
+    }
+}
