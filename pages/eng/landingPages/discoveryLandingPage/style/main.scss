@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E5EEFF;
+}
+
+#responsiveHeader {
+    display: none;
+    width: 100vw;
+    max-width: 100%;
+    height: 40vh;
+    background-color: #020253;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h1 {
+        width: 80%;
+        font: normal normal bold 36px/47px Assistant;
+        color: #0EE1DA;
+    }
+
+    p {
+        width: 70%;
+        font: normal normal normal 20px/26px Assistant;
+        color: #F9F9F9;
+    }
+}
+
+.container {
+    width: 65vw;
+    height: 97vw; //height relative to the width for square grids
+    margin: 15vh auto;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+    gap: 20px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+    }
+
+    header {
+        display: block;
+        grid-column: 3 / span 2;
+        grid-row: 1 / span 2;
+        background-color: #020253;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h1 {
+            width: 85%;
+            font: normal normal bold 61px/80px Assistant;
+            color: #0EE1DA;
+        }
+
+        p {
+            width: 75%;
+            font: normal normal normal 20px/26px Assistant;
+            color: #F9F9F9;
+        }
+    }
+
+    .formContainer {
+        grid-column: 1 / span 2;
+        grid-row: 4 / span 3;
+        background-color: #8E097C;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        h2 {
+            width: 70%;
+            font: normal normal bold 35px/46px Assistant;
+            color: #FFFFFF;
+        }
+
+        p {
+            width: 80%;
+            font: normal normal normal 20px/26px Assistant;
+            color: #F9F9F9;
+        }
+
+        form {
+            width: 80%;
+            margin-top: 70px;
+            text-align: center;
+
+            .field {
+                label {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 5px;
+                    line-height: 1;
+                    font: normal normal bold 16px/24px Heebo;
+                    color: #0EE1DA;
+                }
+
+                input,
+                textarea {
+                    width: 100%;
+                    height: 60px;
+                    margin-bottom: 20px;
+                    border: none;
+                    border-bottom: 5px solid #0EE1DA;
+                    background-color: #E5EEFF;
+                }
+
+                textarea {
+                    height: 170px;
+                    resize: none;
+                }
+            }
+
+            input[type=submit] {
+                width: 100%;
+                height: 60px;
+                border: none;
+                background-color: #0EE1DA;
+                line-height: 60px;
+                font: normal normal bold 24px/33px Heebo;
+                letter-spacing: 0.36px;
+                color: #011560;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #responsiveHeader {
+        display: flex;
+    }
+
+    .container {
+        width: 90vw;
+        height: 550vw;
+        margin: 25px auto;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(11, minmax(0, 1fr));
+        gap: 12px;
+
+        header {
+            display: none;
+        }
+
+        .formContainer {
+            grid-column: 1 / span 2;
+            grid-row: 5 / span 4;
+            flex-direction: column;
+
+            h2 {
+                width: 70%;
+                font: normal normal bold 35px/46px Assistant;
+                color: #FFFFFF;
+            }
+
+            p {
+                width: 80%;
+                font: normal normal normal 20px/26px Assistant;
+                color: #F9F9F9;
+            }
+
+            form {
+                margin-top: 30px;
+
+                .field {
+                    label {
+                        font: normal normal bold 8px/11px Heebo;
+                        text-align: left;
+                    }
+
+                    input,
+                    textarea {
+                        height: 30px;
+                        margin-bottom: 15px;
+                        border-bottom: 3px solid #0EE1DA;
+                    }
+
+                    textarea {
+                        height: 95px;
+                    }
+                }
+
+                input[type=submit] {
+                    height: 30px;
+                    line-height: 30px;
+                    font: normal normal bold 12px/16px Heebo;
+                    letter-spacing: 0.18px;
+                }
+            }
+        }
+    }
+}
