@@ -1,0 +1,43 @@
+#about {
+    padding: 80px 0;
+    border-bottom: 1px solid $mint;
+
+    h2 {
+        margin-bottom: 25px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            max-width: 600px;
+            margin-left: 50px;
+        }
+    }
+
+    @include tablet {
+        .wrapper {
+            p {
+                text-align: justify;
+            }
+        }
+    }
+
+    @include phone {
+        padding: 50px 0;
+
+        .wrapper {
+            flex-direction: column;
+
+            p {
+                margin: 0;
+            }
+
+            img {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+#heroSection {
+    height: 800px;
+    max-height: 70vh;
+    margin-top: 75px;
+    background-image: url(../../images/heroSection.png);
+    background-size: cover;
+    background-position: right bottom;
+    border-bottom: 1px solid $mint;
+
+    h1 {
+        margin-left: 20vw;
+        padding-top: calc(20vh - 75px);
+        line-height: 1;
+    }
+
+    .button {
+        margin-left: 20vw;
+        border-radius: 25px;
+        background-color: $yellow;
+    }
+
+    p {
+        width: 500px;
+        margin-left: 20vw;
+        margin-top: 15px;
+        font-size: $smallText;
+    }
+
+    @include tablet {
+        h1 {
+            font-size: 1rem;
+        }
+    }
+
+    @include phone {
+        p {
+            width: 250px;
+        }
+    }
+}
