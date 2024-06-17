@@ -21,16 +21,25 @@
 
             label {
                 display: block;
+                margin-bottom: 1px;
             }
 
             input {
+                height: 30px;
+                width: 50%;
+                border: none;
                 color: $burgundy;
             }
 
+            #requestField {
+                height: 100px;
+            }
+
             input[type=submit] {
-                padding: 5px 15px;
-                border-radius: 10px;
+                width: 50%;
                 background-color: $gunmetal;
+                font-size: $mediumText;
+                font-weight: 600;
             }
         }
     }
@@ -38,5 +47,35 @@
     img {
         height: 400px;
         object-fit: contain;
+    }
+
+    @include tablet {
+        form {
+            .field {
+                input {
+                    width: 100%;
+                }
+
+                input[type=submit] {
+                    width: 100%;
+                }
+            }
+        }
+
+        img {
+            height: 300px;
+        }
+    }
+
+    @include phone {
+        height: 550px;
+
+        form {
+            grid-column: 1 / span 2;
+        }
+
+        img {
+            display: none;
+        }
     }
 }

@@ -2,7 +2,7 @@
 $baseWidth: 80vw;
 
 //typography
-$font: tahoma;
+$font: 'Kumbh Sans';
 $bigText: 5rem;
 $mediumText: 1.5em;
 $smallText: 1.2em;
@@ -36,7 +36,7 @@ $green: #04a777;
     font-family: $font;
 }
 
-html {
+body {
     background-color: $gunmetal;
 }
 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leading The Way</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Heebo:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .background {
+            background-image: url(images/background.png);
+            background-size: cover;
+            background-position: center bottom;
+        }
+
+        h1 {
+            color: #D3E10E !important;
+        }
+
+        p {
+            color: #F9F9F9 !important;
+        }
+
+        label {
+            font: normal normal bold 10px/14px Heebo !important;
+            color: #011560 !important;
+        }
+
+        input {
+            background-color: #E5EEFF !important;
+            border-radius: 0 !important;
+            border: none !important;
+            border-bottom: 3px solid #D3E10E !important;
+        }
+
+        button {
+            background-color: #D3E10E !important;
+            /* Border gives button equal height to the form-control */
+            border-bottom: 4px solid #D3E10E !important;
+            border-top: 4px solid #D3E10E !important;
+            border-radius: 0 !important;
+            font: normal normal bold 14px/19px Heebo !important;
+            letter-spacing: 0.21px !important;
+            color: #011560 !important;
+        }
+
+        /* Resize row proportions to 70:30 at desktop width */
+        @media (min-width: 768px) {
+
+            /* 25% to offset the form slightly upwards */
+            .row {
+                height: 25% !important;
+            }
+
+            .background {
+                height: 70% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid vh-100 g-0 text-center">
+        <div class="row h-50 g-0 align-items-center background">
+            <div class="col">
+                <div class="container w-75">
+                    <h1 class="display-3 fw-bold">Let Us Lead The Way</h1>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto rem tempora, quis eos ducimus
+                        nisi.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row h-50 g-0 align-items-center">
+            <div class="col">
+                <div class="container w-75">
+                    <form>
+                        <div class="row align-items-end">
+                            <div class="col-md text-start mb-3 mb-md-0">
+                                <label for="name" class="form-label mb-0">Full Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="col-md text-start mb-3 mb-md-0">
+                                <label for="email" class="form-label mb-0">Email address</label>
+                                <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                            </div>
+                            <div class="col-md">
+                                <button type="submit" class="btn w-100">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

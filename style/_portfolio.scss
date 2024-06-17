@@ -1,12 +1,9 @@
 #portfolio {
+    padding: 50px 0;
     text-align: center;
 
-    h2 {
-        margin: 30px 0;
-    }
-
     p {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
 
     .wrapper {
@@ -32,6 +29,7 @@
             }
 
             p {
+                margin-bottom: 30px;
                 padding: 0 50px;
                 font-size: $smallText;
             }
@@ -51,6 +49,13 @@
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, 1fr);
             gap: 35px;
+
+            .portfolioItem {
+                p {
+                    margin-bottom: 20px;
+                    padding: 0 20px;
+                }
+            }
         }
     }
 
