@@ -15,4 +15,10 @@
         margin: 0 10px;
         object-fit: contain;
     }
+
+    @include phone {
+        img {
+            margin: 0 5px;
+        }
+    }
 }
