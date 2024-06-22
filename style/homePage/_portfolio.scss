@@ -9,7 +9,7 @@
     .wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
         gap: 50px;
 
         .portfolioItem {
@@ -47,10 +47,14 @@
     @include tablet {
         .wrapper {
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
             gap: 35px;
 
             .portfolioItem {
+                h3 {
+                    padding: 0 20px;
+                }
+
                 p {
                     margin-bottom: 20px;
                     padding: 0 20px;
@@ -62,7 +66,7 @@
     @include phone {
         .wrapper {
             grid-template-columns: 1fr;
-            grid-template-rows: repeat(6, 1fr);
+            grid-template-rows: repeat(8, 1fr);
             gap: 25px;
         }
     }
