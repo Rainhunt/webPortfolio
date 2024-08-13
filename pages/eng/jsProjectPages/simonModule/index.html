@@ -18,11 +18,24 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            background-image: url(media/background.jpg);
+            background-size: cover;
+            background-position: bottom center;
         }
 
         canvas {
             height: 60%;
             aspect-ratio: 1/1;
+        }
+
+        #attribution {
+            padding: 5px;
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            color: rgb(243, 197, 175);
+            font-weight: bolder;
+            background-color: #361212a6;
         }
     </style>
 </head>
@@ -31,6 +44,7 @@
     <div id="container">
         <canvas width="500" height="500" id="board"></canvas>
     </div>
+    <p id="attribution">Background by FreePik</p>
     <script type="module" src="main.js"></script>
 </body>
 

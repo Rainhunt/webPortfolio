@@ -5,6 +5,7 @@ export class ControlPanel {
     #cardPanel = document.createElement("div");
     #selectedCard;
     #selectedElement;
+    #page;
     #pageID;
     #editButton = document.createElement("button");
     constructor(page, controlPanel, cards) {
@@ -15,6 +16,7 @@ export class ControlPanel {
             this.selectedElement = pageElement;
             this.#element.replaceChild(this.#cardPanel, this.#element.lastChild);
         });
+        this.#page = pageElement;
         this.#selectedElement = pageElement;
         this.#pageID = page.id;
         //create the card panel
@@ -129,6 +131,7 @@ export class ControlPanel {
         });
         deleteButton.addEventListener("click", () => {
             this.#selectedElement.element.remove();
+            this.selectedElement = this.#page;
         });
         return elementPanel;
     }

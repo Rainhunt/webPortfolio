@@ -10,45 +10,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-image: url(../media/background.jpg);
+    background-size: cover;
+    background-position: bottom center;
 }
 
-table,
-tr,
-td {
-    border: 1px solid #000;
-    border-collapse: collapse;
-}
-
-td {
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    vertical-align: center;
-    font-size: 50px;
-    font-family: "Kumbh Sans";
-    font-weight: 900;
-}
-
-td::first-letter {
-    cursor: move;
-}
-
-td.filled {
-    border: 3px solid limegreen;
-}
-
-td.light {
-    background-color: #E3C16F;
-}
-
-td.dark {
-    background-color: #B88B4A;
-}
-
-td.white {
-    color: white;
-}
-
-td.black {
-    color: black;
+#attribution {
+    padding: 5px;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    color: rgb(243, 197, 175);
+    font-weight: bolder;
+    background-color: #361212a6;
 }

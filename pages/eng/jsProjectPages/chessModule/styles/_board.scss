@@ -1,0 +1,61 @@
+table {
+    width: 80vmin;
+    height: 80vmin;
+    border-collapse: collapse;
+}
+
+td {
+    width: 12.5%;
+    height: 12.5%;
+    border: 1px solid #000;
+    text-align: center;
+    vertical-align: center;
+    font-size: 60px;
+    font-family: "Kumbh Sans";
+    font-weight: 900;
+}
+
+td::first-letter {
+    cursor: pointer;
+}
+
+td.filled {
+    border: 3px solid limegreen;
+    cursor: pointer;
+}
+
+td.light {
+    background-color: #E3C16F;
+}
+
+td.dark {
+    background-color: #B88B4A;
+}
+
+td.white {
+    color: white;
+}
+
+td.black {
+    color: black;
+}
+
+
+@media (max-width: 1200px) {
+    table {
+        width: 90vmin;
+        height: 90vmin;
+    }
+}
+
+
+@media (max-width: 768px) {
+    table {
+        width: 100vmin;
+        height: 100vmin;
+    }
+
+    td {
+        font-size: 30px;
+    }
+}

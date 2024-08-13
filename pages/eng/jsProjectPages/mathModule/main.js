@@ -35,6 +35,17 @@ openFilters.addEventListener("click", () => {
 });
 //create range elements
 const ranges = document.createElement("div");
+const operations = document.createElement("div");
+operations.className = "range-wrapper";
+const operationsLabel = document.createElement("label");
+operationsLabel.htmlFor = "operations-input";
+operationsLabel.innerText = "Difficulty: ";
+const operationsInput = document.createElement("input");
+operationsInput.type = "number";
+operationsInput.id = "operations-input";
+operationsInput.value = config.difficulty;
+operations.appendChild(operationsLabel);
+operations.appendChild(operationsInput);
 const min = document.createElement("div");
 min.className = "range-wrapper";
 const minLabel = document.createElement("label");
@@ -57,6 +68,7 @@ maxInput.id = "max-input";
 maxInput.value = config.max;
 max.appendChild(maxLabel);
 max.appendChild(maxInput);
+ranges.appendChild(operations);
 ranges.appendChild(min);
 ranges.appendChild(max);
 filters.appendChild(ranges);
@@ -83,6 +95,14 @@ input.addEventListener("keydown", (e) => {
         }
         input.value = "";
     }
+});
+operationsInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+        operationsInput.value <= 5 ? config.difficulty = Number(operationsInput.value) : operationsInput.value = config.difficulty;
+    }
+});
+operationsInput.addEventListener("blur", () => {
+    operationsInput.value > 0 && operationsInput.value <= 5 ? config.difficulty = Number(operationsInput.value) : operationsInput.value = config.difficulty;
 });
 minInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {

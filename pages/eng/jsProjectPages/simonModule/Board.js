@@ -9,7 +9,7 @@ export class Board {
     gap = 20;
     centerX;
     centerY;
-    backgroundColor = "white";
+    backgroundColor = "beige";
     blueButton;
     yellowButton;
     greenButton;

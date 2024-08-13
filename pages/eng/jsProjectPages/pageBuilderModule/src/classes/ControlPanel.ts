@@ -7,6 +7,7 @@ export class ControlPanel {
     #cardPanel: HTMLDivElement = document.createElement("div");
     #selectedCard: card;
     #selectedElement: IElement;
+    #page: DivElement;
     #pageID: string;
     #editButton: HTMLButtonElement = document.createElement("button");
 
@@ -18,6 +19,7 @@ export class ControlPanel {
             this.selectedElement = pageElement;
             this.#element.replaceChild(this.#cardPanel, this.#element.lastChild as Node);
         });
+        this.#page = pageElement;
         this.#selectedElement = pageElement;
         this.#pageID = page.id;
 
@@ -138,6 +140,7 @@ export class ControlPanel {
 
         deleteButton.addEventListener("click", () => {
             this.#selectedElement.element.remove();
+            this.selectedElement = this.#page;
         });
         return elementPanel;
     }
