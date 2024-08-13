@@ -1,0 +1,15 @@
+#page {
+    margin-left: 400px;
+    max-width: calc(100% - 400px);
+    height: max-content;
+    min-height: 100%;
+    flex-grow: 1;
+
+    div {
+        display: flex;
+    }
+
+    p {
+        height: max-content;
+    }
+}

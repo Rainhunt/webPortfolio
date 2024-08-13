@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+    .selected-element {
+        border: 3px solid rgb(171, 140, 231) !important;
+    }
+}
