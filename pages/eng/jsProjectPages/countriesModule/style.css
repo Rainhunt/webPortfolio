@@ -1,0 +1,10 @@
+* {
+  direction: ltr !important;
+}
+
+img {
+  height: 35%;
+}
+.bi:hover {
+  cursor: pointer;
+}
