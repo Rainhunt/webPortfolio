@@ -132,6 +132,7 @@ export class ControlPanel {
         deleteButton.addEventListener("click", () => {
             this.#selectedElement.element.remove();
             this.selectedElement = this.#page;
+            this.#element.replaceChild(this.#cardPanel, this.#element.lastChild);
         });
         return elementPanel;
     }

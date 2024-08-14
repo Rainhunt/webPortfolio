@@ -10,21 +10,23 @@
 
 <body>
     <div class="wrapper">
-        <div class="game-container">
-            <div class="input-wrapper">
-                <p id="problems"></p>
-                <input type="number" id="input">
-            </div>
-            <div class="button-wrapper">
-                <div class="buttons">
-                    <input type="button" value="Skip" id="skip">
-                    <input type="button" value="Get Answer" id="answer">
-                    <input type="button" value="Filters" id="open-filters">
+        <div class="game-wrapper">
+            <div class="game-container">
+                <div class="input-wrapper">
+                    <p id="problems"></p>
+                    <input type="number" id="input">
                 </div>
-                <div id="filter-wrapper"></div>
+                <div class="button-wrapper">
+                    <div class="buttons">
+                        <input type="button" value="Skip" id="skip">
+                        <input type="button" value="Get Answer" id="answer">
+                        <input type="button" value="Filters" id="open-filters">
+                    </div>
+                    <div id="filter-wrapper"></div>
+                </div>
             </div>
+            <div id="feedback-container"></div>
         </div>
-        <div id="feedback-container"></div>
     </div>
     <script src="main.js"></script>
 </body>

@@ -12,3 +12,7 @@ nav {
         font-size: 16pt;
     }
 }
+
+@include tablet {
+    nav {}
+}

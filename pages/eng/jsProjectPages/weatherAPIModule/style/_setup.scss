@@ -8,6 +8,18 @@ $dark-blue: #011436;
 $light-blue: #094280;
 $border: #0D2F52;
 
+@mixin tablet {
+    @media (max-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin phone {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
 #container {
     width: 100vw;
     height: 100vh;

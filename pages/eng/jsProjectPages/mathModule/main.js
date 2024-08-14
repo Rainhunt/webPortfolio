@@ -76,7 +76,6 @@ filters.appendChild(ranges);
 //addEventListeners
 answer.addEventListener("click", () => {
     revealAnswer(false);
-    console.log(`${currentProblem}: and the answer is \n${eval(filterString(currentProblem))}`);
     currentProblem = createProblem();
     problem.innerText = currentProblem;
 });
@@ -155,7 +154,6 @@ function createProblem() {
             case "/":
                 let tries = 0;
                 newNum = getNonZeroRand(config.min, config.max);
-                console.log(eval(filterString(getLastDivisibleString(String(problem)))));
                 while (newNum < 0 || eval(filterString(getLastDivisibleString(String(problem)))) % newNum !== 0) { //ensure divsion ends up with a whole number
                     newNum = getNonZeroRand(config.min, config.max);
                     tries++;

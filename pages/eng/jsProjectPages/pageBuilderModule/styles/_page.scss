@@ -1,6 +1,6 @@
 #page {
     margin-left: 400px;
-    max-width: calc(100% - 400px);
+    width: calc(100% - 400px);
     height: max-content;
     min-height: 100%;
     flex-grow: 1;
@@ -11,5 +11,22 @@
 
     p {
         height: max-content;
+    }
+}
+
+@include tablet {
+    #page {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+}
+
+@include phone {
+    #page {
+        width: 100%;
+        height: calc(100% - 100px);
+        margin-bottom: 100px;
+        margin-left: 0;
+
     }
 }

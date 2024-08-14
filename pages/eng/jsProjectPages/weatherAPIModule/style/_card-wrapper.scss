@@ -42,3 +42,23 @@
         grid-template-rows: 6fr 4fr;
     }
 }
+
+@include tablet {
+    #card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+
+        .card-column-1 {
+            display: none;
+        }
+
+        .card-column-4 {
+            display: none;
+        }
+    }
+}
+
+@include phone {
+    #card-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
