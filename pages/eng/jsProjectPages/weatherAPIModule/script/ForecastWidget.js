@@ -29,9 +29,14 @@ export class ForecastWidget {
     }
 
     async update(data) {
-        const iconResponse = await fetch(`https://openweathermap.org/img/wn/${data[0].weather[0].icon}@2x.png`);
-        this.#icon.src = iconResponse.url;
-        this.#icon.alt = data[0].weather[0].description;
+        try {
+            const iconResponse = await fetch(`https://openweathermap.org/img/wn/${data[0].weather[0].icon}@2x.png`);
+            this.#icon.src = iconResponse.url;
+            this.#icon.alt = data[0].weather[0].description;
+        } catch (error) {
+            console.log("Failed to load icon");
+            console.log(error);
+        }
 
         this.#days.forEach((day, index) => {
             const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -40,9 +45,14 @@ export class ForecastWidget {
         });
 
         for await (const [index, icon] of this.#icons.entries()) {
-            const iconResponse = await fetch(`https://openweathermap.org/img/wn/${data[1][index].weather[0].icon}@2x.png`);
-            icon.src = iconResponse.url;
-            icon.alt = data[1][index].weather[0].description;
+            try {
+                const iconResponse = await fetch(`https://openweathermap.org/img/wn/${data[1][index].weather[0].icon}@2x.png`);
+                icon.src = iconResponse.url;
+                icon.alt = data[1][index].weather[0].description;
+            } catch (error) {
+                console.log("Failed to load icon");
+                console.log(error);
+            }
         }
 
         this.#temps.forEach((day, index) => {

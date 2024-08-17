@@ -28,7 +28,7 @@ export class WidgetManager {
             console.log(error);
         }
         try {
-            const forecastResponse = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.#city}&units=metric&appid=${this.#apiKey}`);
+            const forecastResponse = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${this.#city}&units=metric&appid=${this.#apiKey}`);
             if (forecastResponse.status === 200) {
                 const forecast = await forecastResponse.json();
                 this.#weatherData[1] = forecast.list.filter((val, index) => index % 8 === 0);

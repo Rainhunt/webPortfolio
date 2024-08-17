@@ -17,3 +17,7 @@ Different styles of writing have been used across the various projects-
     The Free Consultation and Trailblazer projects link to an external CSS sheet.
     The Discovery and the Here And Now projects' styles are written in SASS.
     The Lead The Way project is written using Bootstrap.
+
+Apps:
+The apps have been written in javascript and typescript. The projects are responsive and functional, using a variety of technologies such as APIs, HTML canvases, OOP concepts, and complex logic to allow for a dynamic and interactive experience. 
+For the javascript apps, care has been taken to split the file into readable sections. The typescript apps have a src and an out folder, where the code is written and compiled respectively. The page is displayed on the index.html and all images and other media are stored in the media folder. The src folder contains main.ts, the file that the index links to (the compiled version), a classes folder, a utils folder and a file for types.
